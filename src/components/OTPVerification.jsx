@@ -31,10 +31,16 @@ const OTPVerification = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      backgroundColor="blackAlpha.100"
+      backgroundColor="blackAlpha.700"
       color="white"
     >
-      <Card backgroundColor="#252429" padding={6} width="25rem" height="35rem">
+      <Card
+        color="white"
+        backgroundColor="#252429"
+        padding={6}
+        width="25rem"
+        height="35rem"
+      >
         <CardHeader>
           <Heading>LOGO</Heading>
         </CardHeader>
@@ -49,7 +55,7 @@ const OTPVerification = () => {
               <Text>Sent on 77777-77777</Text>
             </HStack>
 
-            <HStack paddingX={4} justifyContent="center">
+            <HStack color="black" paddingX={4} justifyContent="center">
               <OTPInput
                 value={otp}
                 onChange={setOtp}

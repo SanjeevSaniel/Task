@@ -2,7 +2,7 @@ import OTPVerification from "./components/OTPVerification";
 
 function App() {
   return (
-    <div>
+    <div style={{ background: "black" }}>
       <OTPVerification />
     </div>
   );
