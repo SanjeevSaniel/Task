@@ -21,6 +21,7 @@ const OTPVerification = () => {
   // Log in OTP to the console
   const handleChange = () => {
     console.log("OTP", otp);
+    setOtp("");
   };
 
   return (
