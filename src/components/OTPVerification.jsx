@@ -52,7 +52,7 @@ const OTPVerification = () => {
 
             <HStack justifyContent="space-between" fontSize="sm">
               <Text>SMS OTP</Text>
-              <Text>Sent on 77777-77777</Text>
+              <Text color="grey">Sent on 77777-77777</Text>
             </HStack>
 
             <HStack color="black" paddingX={4} justifyContent="center">
