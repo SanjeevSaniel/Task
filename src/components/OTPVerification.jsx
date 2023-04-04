@@ -6,12 +6,10 @@ import {
   Text,
   Heading,
   Stack,
-  Box,
   HStack,
   Link,
-  AbsoluteCenter,
   Button,
-  Input,
+  Container,
 } from "@chakra-ui/react";
 import OTPInput from "otp-input-react";
 import { useState } from "react";
@@ -19,25 +17,19 @@ import { useState } from "react";
 const OTPVerification = () => {
   const [otp, setOtp] = useState("");
 
-  const handleChange = (name, event) => {
-    // setOtp({ [name]: event.target.value });
+  const handleChange = () => {
+    console.log("OTP", otp);
   };
 
   return (
-    <Box
-      position="relative"
-      h="100vh"
+    <Container
+      width="100vw"
+      height="100vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
     >
-      <Card
-        backgroundColor="#252429"
-        padding={6}
-        width="25rem"
-        height="35rem"
-        // justifyContent="center"
-      >
+      <Card backgroundColor="#252429" padding={6} width="25rem" height="35rem">
         <CardHeader>
           <Heading>LOGO</Heading>
         </CardHeader>
@@ -61,56 +53,6 @@ const OTPVerification = () => {
                 otpType="number"
                 // secure
               />
-              {/* <Input
-                autoFocus
-                name="one"
-                value={value}
-                onChange={(event) =>
-                  handleChange(event.target.name, event.target.value)
-                }
-                min={0}
-                max={9}
-                maxLength={1}
-                type="number"
-                autoComplete="one-time-code"
-                textAlign="center"
-                backgroundColor="#32343a"
-                htmlSize={1}
-                width="50px"
-              />
-              <Input
-                name="two"
-                min={0}
-                max={9}
-                maxLength={length}
-                type="number"
-                textAlign="center"
-                backgroundColor="#32343a"
-                htmlSize={1}
-                width="50px"
-              />
-              <Input
-                name="three"
-                min={0}
-                max={9}
-                maxLength={length}
-                type="number"
-                textAlign="center"
-                backgroundColor="#32343a"
-                htmlSize={1}
-                width="50px"
-              />
-              <Input
-                name="four"
-                min={0}
-                max={9}
-                maxLength={length}
-                type="number"
-                textAlign="center"
-                backgroundColor="#32343a"
-                htmlSize={1}
-                width="50px"
-              /> */}
             </HStack>
 
             <Text fontSize="sm">
@@ -120,6 +62,7 @@ const OTPVerification = () => {
               bgGradient="linear(to-r, #e17660, #b667d8)"
               colorScheme="pink"
               color="white"
+              onClick={handleChange}
             >
               Verify
             </Button>
@@ -130,7 +73,7 @@ const OTPVerification = () => {
           <Link fontSize="sm">Go back to Home</Link>
         </CardFooter>
       </Card>
-    </Box>
+    </Container>
   );
 };
 
