@@ -30,6 +30,8 @@ const OTPVerification = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      backgroundColor="blackAlpha.100"
+      color="white"
     >
       <Card backgroundColor="#252429" padding={6} width="25rem" height="35rem">
         <CardHeader>
