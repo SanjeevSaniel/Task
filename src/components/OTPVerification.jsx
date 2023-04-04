@@ -15,8 +15,10 @@ import OTPInput from "otp-input-react";
 import { useState } from "react";
 
 const OTPVerification = () => {
+  // State variable to store the OTP Input value
   const [otp, setOtp] = useState("");
 
+  // Log in OTP to the console
   const handleChange = () => {
     console.log("OTP", otp);
   };
@@ -56,7 +58,10 @@ const OTPVerification = () => {
             </HStack>
 
             <Text fontSize="sm">
-              Entered Wrong Details? <Link color="#b166e5">Re-enter</Link>
+              Entered Wrong Details?{" "}
+              <Link _hover={{ color: "grey" }} color="#b166e5">
+                Re-enter
+              </Link>
             </Text>
             <Button
               bgGradient="linear(to-r, #e17660, #b667d8)"
@@ -70,7 +75,9 @@ const OTPVerification = () => {
         </CardBody>
 
         <CardFooter>
-          <Link fontSize="sm">Go back to Home</Link>
+          <Link _hover={{ color: "grey" }} fontSize="sm">
+            Go back to Home
+          </Link>
         </CardFooter>
       </Card>
     </Container>
